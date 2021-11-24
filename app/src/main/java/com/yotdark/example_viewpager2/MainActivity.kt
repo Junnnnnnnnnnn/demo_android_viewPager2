@@ -49,7 +49,6 @@ class MainActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 content_text.text = textList[position]
             }
-
         })
     }
 }

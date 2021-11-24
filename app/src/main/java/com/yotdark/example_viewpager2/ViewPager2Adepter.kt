@@ -20,16 +20,21 @@ class ViewPager2Adepter(private val context: Context, private val imageList: Mut
         val item: ImageView = itemView.findViewById(R.id.imageView1)
     }
 
+    /**
+     * ViewHolder 를 인스턴스화 하고 return
+     */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PagerViewHolder {
         val view = LayoutInflater.from(context).inflate(
             R.layout.viewholder_main,
             parent,
             false
         )
-
         return PagerViewHolder(view)
     }
 
+    /**
+     * 뷰와 데이터를 바인딩 하는 메서드
+     */
     override fun onBindViewHolder(holder: PagerViewHolder, position: Int) {
         holder.item.setImageDrawable(ContextCompat.getDrawable(context, imageList[position]))
     }
